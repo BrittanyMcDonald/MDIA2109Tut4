@@ -13,15 +13,15 @@ export const MyHeader = () => <Header />;
 
 export const PageWithCustomButtons = () => <div>
     <Header 
-        fontSize={15}
+        fontSize={20}
         color="#ABC"
-        onMouseOver={Change}
+        onMouseOver={ChangeOne}
     />
 
     <Header 
         fontSize={25}
         color="red"
-        onMouseOver={OkClick}
+        onMouseOver={ChangeTwo}
     />
 
 
@@ -50,6 +50,14 @@ function OkClick(){
     alert("OK");
 }
 
-function Change() {
-    document.getElementsByClassName("header_box").style.backgroundColor = "#ffffff";
+
+function ChangeOne() {
+    document.querySelector(".header_box").style.color = "#135c80"
+    document.querySelector(".header_box").style.fontSize = "25px";
 }
+
+function ChangeTwo() {
+    document.querySelector(".header_box").style.color = "#f59f00"
+    document.querySelector(".header_box").style.fontSize = "15px";
+}
+

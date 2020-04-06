@@ -12,14 +12,14 @@ const Header = ({fontSize, color, onMouseOver}) => <div
     font={fontSize}
     >
     <h1 className="header_text">Header</h1>
-</div>
+</div>;
 
 function MouseOver(){
     alert("mouse is over");
 }
 
 Header.defaultProps = {
-    fontSize:12,
+    fontSize: 12,
     color:'#000',
     onMouseOver:MouseOver
 }
