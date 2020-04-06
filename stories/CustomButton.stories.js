@@ -9,19 +9,18 @@ export default {
 
 
 export const MyCustomButton = () => <CustomButton />;
-export const MyHeader = () => <Header />;
 
 export const PageWithCustomButtons = () => <div>
     <Header 
         fontSize={20}
         color="#ABC"
-        onMouseOver={ChangeOne}
+        onMouseOver={OkClick}
     />
 
     <Header 
         fontSize={25}
         color="red"
-        onMouseOver={ChangeTwo}
+        onMouseOver={OkClick}
     />
 
 
@@ -51,13 +50,9 @@ function OkClick(){
 }
 
 
-function ChangeOne() {
-    document.querySelector(".header_box").style.color = "#135c80"
-    document.querySelector(".header_box").style.fontSize = "25px";
-}
+// function Header() {
+//     document.getElementsByName(Header).style.color = "#135c80"
+//     document.getElementsByName(Header).style.fontSize = "25px";
+// }
 
-function ChangeTwo() {
-    document.querySelector(".header_box").style.color = "#f59f00"
-    document.querySelector(".header_box").style.fontSize = "15px";
-}
 
