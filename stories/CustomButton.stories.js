@@ -11,19 +11,6 @@ export default {
 export const MyCustomButton = () => <CustomButton />;
 
 export const PageWithCustomButtons = () => <div>
-    <Header 
-        fontSize={20}
-        color="#ABC"
-        onMouseOver={OkClick}
-    />
-
-    <Header 
-        fontSize={25}
-        color="red"
-        onMouseOver={OkClick}
-    />
-
-
     <CustomButton 
         color="#999"
         text="Cancel" 
@@ -49,10 +36,5 @@ function OkClick(){
     alert("OK");
 }
 
-
-// function Header() {
-//     document.getElementsByName(Header).style.color = "#135c80"
-//     document.getElementsByName(Header).style.fontSize = "25px";
-// }
 
 
