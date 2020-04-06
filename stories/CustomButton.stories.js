@@ -1,20 +1,40 @@
 import React from 'react';
 import CustomButton from '../comps/CustomButton';
+import Header from '../comps/Header';
 
 export default {
-    title: "Custom Button",
+    title:"Custom Button",
     component:CustomButton
 };
 
+
 export const MyCustomButton = () => <CustomButton />;
+export const MyHeader = () => <Header />;
 
 export const PageWithCustomButtons = () => <div>
+    <Header 
+        fontSize={15}
+        color="#ABC"
+        onMouseOver={Change}
+    />
+
+    <Header 
+        fontSize={25}
+        color="red"
+        onMouseOver={OkClick}
+    />
+
+
     <CustomButton 
         color="#999"
-        text="Cancel" />
+        text="Cancel" 
+        onClick={CancelClick}
+        />
     <CustomButton
         color="#3F5"
-        text="OK" />
+        text="OK" 
+        onClick={OkClick}
+        />
     <CustomButton 
         color="#F3F"
         text="Submit" />
@@ -24,4 +44,12 @@ export const PageWithCustomButtons = () => <div>
 
 function CancelClick(){
     alert("cancel");
+}
+
+function OkClick(){
+    alert("OK");
+}
+
+function Change() {
+    document.getElementsByClassName("header_box").style.backgroundColor = "#ffffff";
 }
